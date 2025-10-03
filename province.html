@@ -103,7 +103,7 @@
           Home
         </a>
         
-        <a href="#" class="sidebar-links active-link">
+        <a href="index.html" class="sidebar-links">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -122,7 +122,7 @@
         </a>
         
         </a>
-        <a href="province.html?province=กรุงเทพมหานคร" class="sidebar-links">
+        <a href="province.html?province=กรุงเทพมหานคร" class="sidebar-links active-link">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -146,92 +146,15 @@
         <main>
           <div class="main-top">    <!-- box แรก -->
             <div class="analytics">
-              <h3>Analytics</h3>    
+              <h3>Comparison</h3>    
               
             </div>
             <div class="price-chart shine">
-              <canvas id="expenseChart"></canvas>
+              <canvas id="expenseGraph"></canvas>
             </div>
           </div>
-          <div class="main-bottom">
-            <div class="main-bottom-left">
-              <h3>Overview</h3>
-              <table class="shine">
-                <tr>
-                  <th>Year</th>
-                  <th>Expense</th>
-                  <th>Growth</th>
-                </tr>
-                <tr>
-                  <td>2565</td>
-                  <td>22,372</td>
-                  <td class="growth">
-                    <svg
-                      class="arrow-up-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M9 18v-6H5l7-7 7 7h-4v6H9z" />
-                    </svg>
-                    <span>756</span>
-                    
-                  </td>
-                </tr>
-                
-                  <td>2566</td>
-                  <td>23,695</td>
-                  <td class="growth">
-                    <svg
-                      class="arrow-up-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M9 18v-6H5l7-7 7 7h-4v6H9z" />
-                    </svg>
-                    <span>1,323</span>
-                    
-                  </td>
-                </tr>
-                <tr>
-                  <td>2567</td>
-                  <td>22,282</td>
-                  <td class="growth">
-                    <svg
-                      class="arrow-down-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M15 6v6h4l-7 7-7-7h4V6h6z" />
-                    </svg>
-                    <span>1,413</span>
-                    
-                  </td>
-                </tr>
-              </table>
-            </div>
-
-            <div class="main-bottom-right">
+          <br><br>
+          <div class="main-bottom-right">
               <h3>Predictions</h3>
 <table class="shine">
   <thead>
@@ -241,64 +164,20 @@
       <th>Growth</th>
     </tr>
   </thead>
-  <tbody id="expense-table">
+  <tbody id="province-table">
     <!-- JS จะเติม <tr> ที่นี่ -->
   </tbody>
 </table>
             </div>
-            
-          </div>
-        </main>
-        <section class="stats">
-          <div class="analytics">
-            <h3>Stats</h3>
-            <div class="shine">
-              
-              
-            </div>
-          </div>
-          <div class="stats-top shine">
-            <div>
-              <div class="stats-top-duration">
-                <span>avg/max</span><span>0.654</span>
-              </div>
-              <meter class="stats-tt" value="0.654"></meter>
-            </div>
-            <div>
-              <div class="stats-top-duration">
-                <span>min/max</span><span>0.333</span>
-              </div>
-              <meter class="stats-tt" value="0.333"></meter>
-            </div>
-          </div>
-          <div class="stats-bottom">
-            <div class="recent-transactions"> <!-- Most expense province-->
-              <p class="links">History</p>
-              <button id="toggle-sort">Sort</button>
-            </div>
-            <table class="shine">
-    <thead>
-      <tr>
-        <th>Province</th>
-        <th>Expense</th>
-      </tr>
-    </thead>
-    <tbody id="province-table">
-      <!-- JS จะเติม <tr> ที่นี่ -->
-    </tbody>
-  </table>
-          </div>
-        </section>
-        
-      </div>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js" defer></script>
-    <script src="csvScript.js" defer></script>
-    <script src="mostExpense.js" defer></script>
+    <!--<script src="csvScript.js" defer></script>-->
     <script src="expenseChart.js" defer></script>
     <script src="search.js"></script>
+    <script src="history.js"></script>
+    <script src="province.js"></script>
     
     </body>
     </html>
