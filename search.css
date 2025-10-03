@@ -1,0 +1,74 @@
+/* Container สำหรับ input + dropdown */
+.search-container {
+  position: relative;          /* ให้ dropdown อิงตำแหน่ง input */
+  width: 100%;                 /* เต็ม width ของ parent (.header-middle) */
+  max-width: 300px;            /* จำกัดขนาด input */
+  margin: 0 auto;              /* อยู่กลาง container */
+}
+
+/* Input */
+.search-bar {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+/* Dropdown ของผลลัพธ์ค้นหา */
+.search-results {
+  position: absolute;
+  top: 100%;                   /* อยู่ด้านล่าง input */
+  left: 50%;                   /* เริ่มจากกลาง container */
+  transform: translateX(-50%); /* เลื่อน dropdown กลาง input */
+  max-height: 120px;           /* แสดงสูงสุด 3 รายการ */
+  max-width: 200px;
+  width: 100%;                 /* ขยายเต็มความกว้าง input */
+  overflow-y: auto;            /* เลื่อนขึ้นลงถ้าเกินสูง */
+  background-color: var(--color-bg); /* ใช้สีตามโหมด */
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 100;                /* อยู่เหนือ element อื่น */
+  display: none;               /* ซ่อนก่อนพิมพ์ */
+}
+
+/* List ภายใน dropdown */
+.search-results ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* แต่ละรายการ */
+.search-results li {
+  padding: 5px 10px;
+  cursor: pointer;
+  white-space: nowrap;        /* ไม่ตัดบรรทัด */
+  overflow: hidden;           /* ซ่อนส่วนเกินถ้ายาวเกิน */
+  text-overflow: ellipsis;    /* แสดง ... ถ้าตัด */
+  width: 100%;                /* ให้เต็มความกว้าง parent */
+  box-sizing: border-box;     /* ให้ padding นับรวมใน width */
+}
+
+/* Hover ของแต่ละรายการ */
+.search-results li:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+/* Dark mode suggestion */
+.search-results {
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+/* Light mode suggestion */
+body.light-mode .search-results {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+/* Hover ตามโหมด */
+body.light-mode .search-results li:hover {
+  background-color: #f0f0f0;
+}
