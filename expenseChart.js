@@ -37,11 +37,11 @@ fetch("forecast_expense.csv")
         scales: {
           x: {
             ticks: { color: colors.textColorMuted, font: { size: 14 } },
-            grid: { color: colors.borderColor }
+            grid: { color: colors.borderColor } // <-- สีเส้น grid แกน X
           },
           y: {
             ticks: { color: colors.textColorMuted, font: { size: 14 } },
-            grid: { color: colors.borderColor },
+            grid: { color: colors.borderColor }, // <-- สีเส้น grid แกน Y
             min: Math.floor(minExpense * 0.95), // ลองเล็กน้อยใต้ min
             max: Math.ceil(maxExpense * 1.05),  // ลองเล็กน้อยเหนือ max
           }

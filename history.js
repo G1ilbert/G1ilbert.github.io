@@ -57,7 +57,7 @@ Promise.all([expensePromise, provincePromise]).then(([expData, provData]) => {
                 {
                     label: "ค่าเฉลี่ย",
                     data: expData.expenses,
-                    borderColor: "blue",
+                    borderColor: "#4DA6FF",
                     backgroundColor: "rgba(0,0,255,0.2)",
                     tension: 0.5,
                     pointRadius: 3,
@@ -69,7 +69,7 @@ Promise.all([expensePromise, provincePromise]).then(([expData, provData]) => {
                         const idx = provData.labels.indexOf(year);
                         return idx !== -1 ? provData.expenses[idx] : null;
                     }),
-                    borderColor: "red",
+                    borderColor: "#FFC04D",
                     backgroundColor: "rgba(255,0,0,0.2)",
                     tension: 0.5,
                     pointRadius: 3,
@@ -81,8 +81,8 @@ Promise.all([expensePromise, provincePromise]).then(([expData, provData]) => {
             responsive: true,
             maintainAspectRatio: false,
             scales: {
-                x: { title: { display: true, text: "Year" } },
-                y: { title: { display: true, text: "Expense" } }
+                x: { title: { display: true, text: "" } },
+                y: { title: { display: true, text: "" } }
             },
             plugins: {
                 legend: { display: true },
