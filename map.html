@@ -79,6 +79,7 @@
       <link rel="stylesheet" href="style.css">
       <link rel="stylesheet" href="search.css">
       <link rel="stylesheet" href="mobile.css">
+      <link rel="stylesheet" href="map.css">
       
     </header>
     <body>
@@ -105,7 +106,7 @@
         </a>
         
         </a>
-        <a href="province.html?province=กรุงเทพมหานคร" class="sidebar-links active-link">
+        <a href="province.html?province=กรุงเทพมหานคร" class="sidebar-links">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -123,7 +124,7 @@
           </svg>
           Province
         </a>
-        <a href="map.html" class="sidebar-links ">
+        <a href="map.html" class="sidebar-links active-link">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -145,34 +146,20 @@
         </a>
         
       </aside>
-      <div class="main-layout">
-        <main>
-          <div class="main-top">    <!-- box แรก -->
-            <div class="analytics">
-              <h3>Comparison</h3>    
-              
-            </div>
-            <div class="price-chart shine">
-              <canvas id="expenseGraph"></canvas>
-            </div>
-          </div>
-          <br><br>
-          <div class="main-bottom-right">
-              <h3>Predictions</h3>
-<table class="shine">
-  <thead>
-    <tr>
-      <th>Year</th>
-      <th>Expense</th>
-      <th>Growth</th>
-    </tr>
-  </thead>
-  <tbody id="province-table">
-    <!-- JS จะเติม <tr> ที่นี่ -->
-  </tbody>
-</table>
-            </div>
+      <div class="main-map">
+      <main>
+        
+        <div id="map-container" class="map-container">
+          <!-- SVG จะถูกโหลดด้วย JS -->
+           <svg viewBox="95 18 110 8" preserveAspectRatio="xMidYMid meet">
+  <!-- path จังหวัด -->
+</svg>
+
+        </div>
+      </main>
     </div>
+  </div>
+    
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js" defer></script>
@@ -181,6 +168,7 @@
     <script src="search.js"></script>
     <script src="history.js"></script>
     <script src="province.js"></script>
+    <script src="map.js"></script>
     
     </body>
     </html>
