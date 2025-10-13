@@ -9,3 +9,6 @@ https://g1ilbert.github.io/
 - **ช่อง YouTube ของ Whosajid**  
   - แหล่งที่มา: [Whosajid – YouTube](https://www.youtube.com/@whosajid)  
   - เครดิต: Whosajid
+
+- **svg map thailand**  
+  - แหล่งที่มา: https://mapsvg.com/maps/thailand
